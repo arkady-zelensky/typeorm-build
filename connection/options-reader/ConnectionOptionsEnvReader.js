@@ -21,7 +21,7 @@ var ConnectionOptionsEnvReader = /** @class */ (function () {
             type: PlatformTools_1.PlatformTools.getEnvVariable("TYPEORM_CONNECTION") || (PlatformTools_1.PlatformTools.getEnvVariable("TYPEORM_URL") ? PlatformTools_1.PlatformTools.getEnvVariable("TYPEORM_URL").split("://")[0] : undefined),
             url: PlatformTools_1.PlatformTools.getEnvVariable("TYPEORM_URL"),
             host: PlatformTools_1.PlatformTools.getEnvVariable("TYPEORM_HOST"),
-            port: +PlatformTools_1.PlatformTools.getEnvVariable("TYPEORM_PORT"),
+            port: Number(PlatformTools_1.PlatformTools.getEnvVariable("TYPEORM_PORT")),
             username: PlatformTools_1.PlatformTools.getEnvVariable("TYPEORM_USERNAME"),
             password: PlatformTools_1.PlatformTools.getEnvVariable("TYPEORM_PASSWORD"),
             database: PlatformTools_1.PlatformTools.getEnvVariable("TYPEORM_DATABASE"),
